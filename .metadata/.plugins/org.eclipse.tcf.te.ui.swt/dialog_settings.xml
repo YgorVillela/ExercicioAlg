@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CustomTrayDialog">
+		<section name="org.eclipse.tcf.te.ui.terminals.internal.dialogs.LaunchTerminalSettingsDialog$SettingsPanelControl">
+			<section name="SSH Terminal">
+			</section>
+			<section name="Serial Terminal">
+			</section>
+			<section name="Telnet Terminal">
+			</section>
+		</section>
+	</section>
+</section>

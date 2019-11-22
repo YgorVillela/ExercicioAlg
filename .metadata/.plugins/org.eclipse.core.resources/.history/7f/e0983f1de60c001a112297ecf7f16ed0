@@ -1,0 +1,184 @@
+/*Faça um programa em JAVA que efetue reserva de passagens aéreas de uma determinada companhia.
+ *  O programa deverá ler os números dos aviões e o número de lugares disponíveis em cada um. 
+
+=> Utilize um vetor de 4 (quatro) posições, no qual cada posição representa um avião, 
+e outro vetor também de 4 (quatro) posições para armazenar os lugares disponíveis.
+
+O programa deverá mostrar o seguinte menu de opções:
+
+———————————— MENU ————————————
+1.	Cadastrar números dos aviões
+2.	Cadastrar número de lugares disponíveis em cada avião
+3.	Reservar passagem
+4.	Consultar por avião
+5.	Consultar por passageiro
+6.	Finalizar
+————————————————————————————-
+
+PARA REALIZAR A OPÇÃO 1:
+Deverá ser solicitado ao usuário o número dos 4 (quatro) aviões disponíveis.
+Importante: A opção 1 pode ser acessada apenas 1 (uma) vez. 
+Caso o usuário digite novamente a opção 1 deve aparecer a mensagem: “Números dos aviões já cadastrados”
+
+PARA REALIZAR A OPÇÃO 2:
+Deverá ser solicitado ao usuário o número de lugares disponíveis em cada avião cadastrados na opção 1. 
+Importante: 
+a) A opção 2 pode ser acessada apenas 1 (uma) vez. 
+Caso o usuário digite novamente a opção 2 deve aparecer a mensagem: “Números de lugares disponíveis já cadastrados”
+b) Os números de lugares disponíveis em cada avião deverão ser cadastrados 
+APÓS o cadastro dos números dos aviões, ou seja, NÃO PERMITIR realizar a opção 2 antes da opção 1.
+
+PARA REALIZAR A OPÇÃO 3:
+Deverá ser verificado se o número do avião digitado é válido.
+ Posteriormente, checar se, no avião escolhido, ainda existe lugar disponível.
+  Caso exista, o programa deverá diminuir o total de vagas e mostrar a mensagem "Reserva confirmada". 
+  Caso contrário, deverá mostrar a mensagem “Vôo lotado”. Voltar para o menu de opções.
+Importante:  
+a) Cada reserva deverá possuir o número do avião e o código de identificação do passageiro.
+b) A opção 3 não poderá mais ser acessada após lotação dos 4 (quatro) vôos.
+
+PARA REALIZAR A OPÇÃO 4:
+Deverá ser solicitado o número do avião desejado e, posteriormente, exibir:
+-	Quantidade de reservas realizadas para o avião escolhido.
+-	Quantidade de lugares disponíveis para o avião escolhido.
+Importante:  Validar se o número do avião existe no cadastro.
+
+PARA REALIZAR A OPÇÃO 5:
+Deverá ser solicitado o código de identificação do passageiro e, posteriormente, mostrar um relatório com:
+
+-	Código de Identificação do passageiro
+-	Reservas realizadas pelo Passageiro (Código(s) do(s) avião(ões) e Quantidade de reservas por código do avião)
+
+Exemplo de relatório: 
+
+
+Código de Identificação do usuário: 100
+RESERVAS REALIZADAS:
+Código do avião	Quantidade de reservas
+901	4
+902	2
+905	1
+
+
+
+Importante:  
+a)	Validar se o código de identificação do passageiro existe no cadastro.
+b)	Mostrar a quantidade de reservas do passageiro por avião.
+
+A OPÇÃO 6:
+Encerra o programa.
+*/
+
+package br.com.fiap.logica;
+
+import java.util.Scanner;
+
+public class Exercicio {
+
+	public static void main(String[] args) {
+
+		int cont = 0, opcoes = 0, i = 0, numReserva = 0;
+		int numAviao[] = new int[4];
+		int numLugarDisponivel[] = new int[4];
+		int qtdReserv = 0;
+		boolean consulta = false;
+		int codCli[] = new int[4];
+		boolean voltar = false, voltaLugar = false;
+
+		Scanner teclado = new Scanner(System.in);
+
+		do {
+			System.out.println("1 - Cadastrar número de aviões");
+			System.out.println("2 - Cadastrar número de lugares disponíveis em cada avião");
+			System.out.println("3 - Reservar passagem");
+			System.out.println("4 - Consultar por avião");
+			System.out.println("5 - Consultar por passageiro");
+			System.out.println("6 - Finalizar");
+			opcoes = teclado.nextInt();
+
+			switch (opcoes) {
+			case 1:
+				if (voltar) {
+					System.err.println("Números de aviões já cadastrados!!!");
+					System.out.println();
+				} else {
+					for (i = 0; i < numAviao.length; i++) {
+						System.out.println("Entre com o número do " + (i + 1) + "°avião:");
+						numAviao[i] = teclado.nextInt();
+						voltar = true;
+						consulta = true;
+					}
+				}
+				break;
+			case 2:
+				if (voltar) {
+					if (voltaLugar) {
+						System.err.println("Números de lugares disponíveis já cadastrados!!!");
+						System.out.println();
+
+					} else {
+						for (i = 0; i < numLugarDisponivel.length; i++) {
+							System.out.println("Entre com os lugares disponíveis no número do avião " + numAviao[i]);
+							numLugarDisponivel[i] = teclado.nextInt();
+							voltaLugar = true;
+						}
+					}
+				} else {
+					System.err.println("Cadastre primeiro os números dos aviões!!!");
+				}
+				break;
+			case 3:
+				System.out.println("Entre com o número do avião que deseja reservar a passagem:");
+				numReserva = teclado.nextInt();
+
+				boolean existe = false;
+
+				if (voltar) {
+					if (numLugarDisponivel[numReserva - 1] > 0) {
+						System.out.print("Informe o código do cliente:");
+						codCli[numReserva - 1] = teclado.nextInt();
+						numLugarDisponivel[numReserva - 1] -= 1;
+						qtdReserv++;
+						System.out.println("Reserva confirmada!");
+						codCli[numReserva - 1] = 0;
+						
+					} else {
+						System.err.println("Vôo lotado!!!");
+					}
+				}
+				break;
+			case 4:
+				int numCons = 0;
+				
+				System.out.println("Entre com o número do avião para consultá-lo:");
+				numCons = teclado.nextInt();
+				
+				if(consulta){
+					for (i = 0; i < 1; i++) {
+						if (numLugarDisponivel[i]>0) {
+							System.out.println("Numero de lugares disponiveis do " + (i-1) + "°avião: "+ numLugarDisponivel[numCons]);
+							System.out.println("Quantidade de reservas realizadas para o avião " + numAviao[i] + ": "+ numLugarDisponivel[qtdReserv]);
+						} else {
+							System.err.println("Número inválido!!!");
+						}
+					}
+				}
+				
+				break;
+			case 5:
+				// System.out.println("5 - Consultar por passageiro");
+				break;
+			case 6:
+				// System.out.println("6 - Finalizar");
+				System.exit(0);
+			default:
+				System.err.println("Opção Inválida!!!");
+				break;
+			}
+
+		} while (cont <= 6);
+
+		teclado.close();
+	}
+
+}

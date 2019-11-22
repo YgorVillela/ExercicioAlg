@@ -1,0 +1,1316 @@
+!SESSION 2019-11-21 18:11:21.834 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+
+!ENTRY org.eclipse.osgi 4 0 2019-11-21 18:11:27.271
+!MESSAGE error loading hook: org.eclipse.persistence.jpa.equinox.weaving.WeavingConfigurator
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/osgi/baseadaptor/HookConfigurator
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.loadConfigurators(HookRegistry.java:185)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.initialize(HookRegistry.java:106)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:64)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:31)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:303)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.osgi.baseadaptor.HookConfigurator
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 26 more
+
+!ENTRY org.eclipse.osgi 4 0 2019-11-21 18:11:27.287
+!MESSAGE error loading hook: org.eclipse.objectteams.otequinox.hook.HookConfigurator
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/osgi/baseadaptor/HookConfigurator
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.loadConfigurators(HookRegistry.java:185)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.initialize(HookRegistry.java:106)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:64)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:31)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:303)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.osgi.baseadaptor.HookConfigurator
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 26 more
+
+!ENTRY org.eclipse.wst.server.preview 4 0 2019-11-21 18:11:43.944
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.server.preview [2378]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.server.preview [osgi.identity; type="osgi.bundle"; version:Version="1.1.102.v20130123_1813"; osgi.identity="org.eclipse.wst.server.preview"; singleton:="true"] because it is exposed to package 'javax.servlet' from resources javax.servlet [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.v201112011016"; osgi.identity="javax.servlet"] and javax.servlet [osgi.identity; type="osgi.bundle"; version:Version="3.1.0.v201410161800"; osgi.identity="javax.servlet"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.server.preview [osgi.identity; type="osgi.bundle"; version:Version="1.1.102.v20130123_1813"; osgi.identity="org.eclipse.wst.server.preview"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=javax.servlet)(&(bundle-version>=2.6.0)(!(bundle-version>=3.1.0))))
+     |
+    provide: osgi.wiring.bundle: javax.servlet
+  javax.servlet [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.v201112011016"; osgi.identity="javax.servlet"]
+
+Chain 2:
+  org.eclipse.wst.server.preview [osgi.identity; type="osgi.bundle"; version:Version="1.1.102.v20130123_1813"; osgi.identity="org.eclipse.wst.server.preview"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.jetty.http)(&(bundle-version>=8.0.4)(!(bundle-version>=9.0.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="8.1.3.v20120522"; osgi.wiring.bundle="org.eclipse.jetty.http"
+  org.eclipse.jetty.http [osgi.identity; type="osgi.bundle"; version:Version="8.1.3.v20120522"; osgi.identity="org.eclipse.jetty.http"]
+    import: (&(osgi.wiring.package=org.eclipse.jetty.util.ssl)(&(version>=8.1.0)(!(version>=9.0.0))))
+     |
+    export: osgi.wiring.package=org.eclipse.jetty.util.ssl; uses:=javax.servlet
+  org.eclipse.jetty.util [osgi.identity; type="osgi.bundle"; version:Version="8.1.3.v20120522"; osgi.identity="org.eclipse.jetty.util"]
+    import: (&(osgi.wiring.package=javax.servlet)(version>=2.6.0))
+     |
+    export: osgi.wiring.package: javax.servlet
+  javax.servlet [osgi.identity; type="osgi.bundle"; version:Version="3.1.0.v201410161800"; osgi.identity="javax.servlet"]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-11-21 18:12:51.713
+!MESSAGE Both 'org.eclipse.soa.sca.sca1_0.model' and 'org.eclipse.soa.sca.sca1_1.model' register an extension parser for 'composite'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-11-21 18:12:51.729
+!MESSAGE Both 'org.eclipse.gmf.bridge.trace' and 'org.eclipse.xpand.incremental' register an extension parser for 'trace'
+
+!ENTRY org.eclipse.papyrus.uml.diagram.common 4 0 2019-11-21 18:13:12.042
+!MESSAGE Unexpected Error
+!STACK 0
+org.eclipse.papyrus.infra.core.services.ServiceNotFoundException: Can't get the current Eclipse Active Editor. No ServiceRegistry found.
+	at org.eclipse.papyrus.infra.core.utils.ServiceUtilsForActionHandlers.getServiceRegistry(ServiceUtilsForActionHandlers.java:71)
+	at org.eclipse.papyrus.infra.core.utils.ServiceUtilsForActionHandlers.getTransactionalEditingDomain(ServiceUtilsForActionHandlers.java:88)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.GraphicalCommandHandler.getEditingDomain(GraphicalCommandHandler.java:136)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.LoadHandler.getCommand(LoadHandler.java:49)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.GraphicalCommandHandler.isEnabled(GraphicalCommandHandler.java:108)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.isEnabled(HandlerProxy.java:323)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:73)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:282)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:264)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:58)
+	at org.eclipse.core.commands.Command.isEnabled(Command.java:840)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.registerLegacyHandler(LegacyHandlerService.java:170)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.registerLegacyHandler(LegacyHandlerService.java:151)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.readDefaultHandlers(LegacyHandlerService.java:635)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.readRegistry(LegacyHandlerService.java:547)
+	at org.eclipse.ui.internal.Workbench$49.runWithException(Workbench.java:2486)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4821)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:95)
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2480)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1678)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2944)
+	at org.eclipse.ui.internal.Workbench.access$9(Workbench.java:2875)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:684)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.papyrus.uml.diagram.common 4 0 2019-11-21 18:13:12.042
+!MESSAGE Unexpected Error
+!STACK 0
+org.eclipse.papyrus.infra.core.services.ServiceNotFoundException: Can't get the current Eclipse Active Editor. No ServiceRegistry found.
+	at org.eclipse.papyrus.infra.core.utils.ServiceUtilsForActionHandlers.getServiceRegistry(ServiceUtilsForActionHandlers.java:71)
+	at org.eclipse.papyrus.infra.core.utils.ServiceUtilsForActionHandlers.getTransactionalEditingDomain(ServiceUtilsForActionHandlers.java:88)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.GraphicalCommandHandler.getEditingDomain(GraphicalCommandHandler.java:136)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.UnloadHandler.getCommand(UnloadHandler.java:49)
+	at org.eclipse.papyrus.uml.diagram.common.handlers.GraphicalCommandHandler.isEnabled(GraphicalCommandHandler.java:108)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.isEnabled(HandlerProxy.java:323)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:73)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:282)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:264)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:58)
+	at org.eclipse.core.commands.Command.isEnabled(Command.java:840)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.registerLegacyHandler(LegacyHandlerService.java:170)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.registerLegacyHandler(LegacyHandlerService.java:151)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.readDefaultHandlers(LegacyHandlerService.java:635)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.readRegistry(LegacyHandlerService.java:547)
+	at org.eclipse.ui.internal.Workbench$49.runWithException(Workbench.java:2486)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4821)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:95)
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2480)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1678)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2944)
+	at org.eclipse.ui.internal.Workbench.access$9(Workbench.java:2875)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:684)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.ui 4 4 2019-11-21 18:13:12.339
+!MESSAGE Conflicting handlers for org.eclipse.ptp.pldt.openshmem.command4: {org.eclipse.ptp.pldt.openshmem.actions.RunAnalyseOpenSHMEMcommandHandler} vs {org.eclipse.ptp.pldt.openshmem.actions.RunAnalyseOpenSHMEMcommandHandler}
+
+!ENTRY org.eclipse.jface 2 0 2019-11-21 18:13:16.267
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.267
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.command.OpenFromClipboard,Open from Clipboard,
+		Opens a Java element or a Java stack trace from clipboard,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@56db2171,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.papyrus.uml.diagram.common.commands.PasteWithModelCommand,PasteWithModel,
+		Paste content in a diagram (graphic+ semantic),
+		Category(org.eclipse.papyrus.editor.category,Papyrus Category,this a category of papyrus commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6581985b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.283
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.SaveImageAction,Export Diagram,
+		Export Diagram,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@791930f8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.papyrus.sysml.modelexplorer.FlowPort_OutCreateCommand,Create a new FlowPort_Out,
+		Create a new FlowPort_Out,
+		Category(org.eclipse.papyrus.editor.category,Papyrus Category,this a category of papyrus commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b858ed8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.283
+!MESSAGE A conflict occurred for ALT+CTRL+P:
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.profiles.ui.commands.selectMavenProfileCommand,Select Maven Profiles,
+		,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34dae070,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.preparechangelog,Prepare Changelog,
+		Prepares Changelog,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5df0e5f0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CreatePatchCommand,Create Patch...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6dde8046,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.283
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7aba206b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1980962c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43853f89,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.283
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a405b0f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71529154,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-21 18:13:16.283
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cfe48a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ed4bc5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2019-11-21 18:13:28.299
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-11-21 18:14:57.011
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-11-21 18:14:59.499
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Marcius-PC'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.mylyn.tasks.core 1 0 2019-11-21 18:15:02.217
+!MESSAGE Migrating task repository credentials from keyring.
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-11-21 18:15:19.292
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Executable extension definition for "class" not found.
+	at org.eclipse.core.internal.registry.ConfigurationElement.throwException(ConfigurationElement.java:62)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:222)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:291)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:286)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2835)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2019-11-21 18:15:19.293
+!MESSAGE Executable extension definition for "class" not found.
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2019-11-21 18:15:19.293
+!MESSAGE Executable extension definition for "class" not found.
+
+!ENTRY org.eclipse.ui 4 0 2019-11-21 18:15:19.503
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'org.eclipse.jst.ws.jaxws.utils' plug-in.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Executable extension definition for "class" not found.
+	at org.eclipse.core.internal.registry.ConfigurationElement.throwException(ConfigurationElement.java:62)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:222)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:291)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:286)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2835)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2019-11-21 18:15:19.503
+!MESSAGE Executable extension definition for "class" not found.
+
+!ENTRY org.eclipse.scout.sdk 1 0 2019-11-21 18:15:23.291
+!MESSAGE org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:774)
+	Starting SCOUT SDK Plugin.
+
+!ENTRY org.eclipse.jface.text 2 0 2019-11-21 18:19:50.035
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-11-21 18:19:50.135
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-11-21 18:19:51.401
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-11-21 18:19:51.406
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.debug.ui 4 0 2019-11-21 18:31:18.452
+!MESSAGE Tab group extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup for type org.eclipse.cdt.launch.applicationLaunchType for the [profile] mode has been replaced by extension: org.eclipse.ptp.etfw.tau.performance.launchConfigurationTabGroup
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2019-11-21 18:46:36.125
+!MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY org.eclipse.tcf 4 0 2019-11-22 00:15:16.449
+!MESSAGE Invalid datagram packet received from /192.168.1.1/1534
+!STACK 0
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at org.eclipse.tcf.internal.services.local.LocatorService.handleSlavesInfoPacket(LocatorService.java:1096)
+	at org.eclipse.tcf.internal.services.local.LocatorService.handleDatagramPacket(LocatorService.java:1011)
+	at org.eclipse.tcf.internal.services.local.LocatorService.access$8(LocatorService.java:982)
+	at org.eclipse.tcf.internal.services.local.LocatorService$3$1.run(LocatorService.java:289)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:209)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.help 4 0 2019-11-22 03:27:12.406
+!MESSAGE Error reading help table of contents file /"org.eclipse.koneki.ldt.doc.user/help/Koneki-LDT-User-Guide-toc.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.585
+!MESSAGE Help index declared, but missing for plugin org.eclipse.net4j.db.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.702
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.cdo.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.773
+!MESSAGE index/indexed_dependencies file missing from help index "index" of plugin org.eclipse.uml2.doc
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.776
+!MESSAGE Help index declared, but missing for plugin org.eclipse.php.help.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.802
+!MESSAGE Help index declared, but missing for plugin org.eclipse.rse.doc.user.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.817
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.eef.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.842
+!MESSAGE Help index declared, but missing for plugin org.eclipse.net4j.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.856
+!MESSAGE Help index declared, but missing for plugin org.eclipse.ocl.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.941
+!MESSAGE Help index declared, but missing for plugin org.eclipse.xpand.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.944
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.transaction.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:27:37.968
+!MESSAGE Help index declared, but missing for plugin org.eclipse.net4j.util.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2019-11-22 03:29:32.755
+!MESSAGE An error occured while pre-processing help XHTML document "/org.eclipse.emf.facet.widgets.table.doc/mediawiki/plugin_dev.html" for search indexing
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 325; columnNumber: 5; O tipo de elemento font" deve ser encerrado pela tag final correspondente "</font>".
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:56)
+	at org.eclipse.help.internal.dynamic.XMLProcessor.process(XMLProcessor.java:49)
+	at org.eclipse.help.internal.xhtml.DynamicXHTMLProcessor.process(DynamicXHTMLProcessor.java:76)
+	at org.eclipse.help.internal.search.XHTMLSearchParticipant.preprocess(XHTMLSearchParticipant.java:111)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:309)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:53)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:236)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:630)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:604)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.help.base 4 4 2019-11-22 03:30:29.611
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.611
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.611
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/schema/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/console/profile/nls/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/design/ui/designsession/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/xml/query/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/lexer/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/pages/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ingres/containment/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/tables/helper/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/ui/editor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/ui/extract/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/containment/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/common/data/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/ui/connection/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/common/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/driver/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/sql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/db/generic/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.612
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/dialog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/valueexpr/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/launching/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/partition/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/action/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/template/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/pages/general/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/parser/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/derby/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/definition/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/load/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/ui/view/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/caseexpr/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/exceptions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/with/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/postparse/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ingres/models/ingressqlmodel/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/profile/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/ui/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.613
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/view/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ui/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/sql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/wizards/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/export/component/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/perspectives/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/criteria/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/editorext/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/udteditor/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/multiexpr/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/pages/intropage/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/consumer/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/containment/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/catalog/loaders/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.614
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/navigator/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/pages/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasabasesqlmodel/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/ui/load/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/fullselect/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/templates/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/plan/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.630
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/storage/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/triggers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/statements/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/rte/jdbc/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/indent/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/export/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/containment/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/expressions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/accesscontrol/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/editor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/statements/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/constraints/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/sqlbuilderdialog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/dnd/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/breakpoint/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/result/filter/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/tables/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.631
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/parser/ast/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.632
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/core/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.632
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/helpsystem/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/perspectives/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/plan/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/export/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/query/helper/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/insert/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/msft/sqlserver/ui/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/rte/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/ui/explorer/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.modisco.doc/javadoc/index.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/action/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/ui/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/source/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/commonui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sap/maxdb/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/common/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/sql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/schema/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/constraints/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.634
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/action/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/deltaddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/select/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/preferences/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/containment/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/deltaddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/apache/derby/ui/explorer/providers/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/query/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/query/postparse/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/launching/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlscrapbook/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/ddl/shared/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ui/filter/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/commonui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/filters/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/rte/fe/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.635
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/internal/template/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/ui/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/columns/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/templates/dialog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/query/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/tableviewer/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/deltaddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/xml/query/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/export/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/indexes/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/consumer/util/manifest/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/model/validation/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/loaders/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.636
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/cast/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/navigator/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/udteditor/pages/general/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/ui/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/mappings/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/providers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/partition/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasabasesqlmodel/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.637
+!MESSAGE Exception occurred while adding document /org.eclipse.emf.facet.widgets.table.doc/mediawiki/plugin_dev.html to index.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Fim prematuro do arquivo.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at javax.xml.parsers.SAXParser.parse(Unknown Source)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:310)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:53)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:236)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:630)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:604)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/query/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/debug/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/accesscontrol/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/templates/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/view/internal/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/extension-points/org_eclipse_emf_transaction_editingDomains.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/ui/launching/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/editor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/constraints/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/db/generic/ui/wizard/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/export/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.638
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/subquery/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/partition/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/preferences/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/javadoc/dummy.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasasqlmodel/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.639
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/delete/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.659
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/schema/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/util/logging/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ibm/informix/ui/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/reference/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/udteditor/action/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/extract/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/jdt/classpath/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/internal/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/constant/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasabasesqlmodel/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ibm/db2/luw/ui/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/core/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/commonui/privilege/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.660
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/matching/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasasqlmodel/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/routines/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/db/generic/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/expressions/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/viewer/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/ui/explorer/providers/content/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/index/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/core/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/ui/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/commonui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/routines/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/design/ui/manifest/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/statements/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/plan/treeplan/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/pages/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/identifier/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/expressions/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.661
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/internal/actions/selection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/design/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/providers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/plan/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/datatypes/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/preferences/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/parser/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/models/sybaseasesqlmodel/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sap/maxdb/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/parser/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/tabledataeditor/actions/providers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/accesscontrol/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/sqlstatementarea/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ddl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/graph/commands/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/update/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/baseloaders/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/loader/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.662
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/tableeditor/pages/privileges/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/graph/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.modisco.doc/mediawiki/new_and_noteworthy.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/sourcelookup/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqleditor/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/base/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/dialogs/filters/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ase/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/pages/source/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/hsqldb/ui/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/filters/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/parser/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/debugger/core/internal/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/drivers/jdbc/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/execute/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/query/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/datatypes/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ingres/models/ingressqlmodel/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/ui/internal/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/contentassist/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.emf.query.doc/references/javadoc/overview-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/derby/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/updater/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.663
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/provider/rdbschema/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/extension-points/org_eclipse_emf_transaction_listeners.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/parsers/sql/query/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/design/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/routines/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/oracle/ui/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/data/internal/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/models/sybasesqlmodel/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/mysql/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sql/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/tables/provider/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/graph/figures/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/tables/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/tabledataeditor/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/catalog/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/resource/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/util/manifest/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/design/ui/wizards/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/models/sybasesqlmodel/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.664
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/xml/query/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/editor/core/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/models/sybaseasasqlmodel/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/preference/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/db/derby/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/expressionbuilder/function/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/dbdefcreation/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/loader/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/drivers/models/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/views/graph/editparts/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/schema/helper/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/virtual/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/result/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/dse/views/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/result/internal/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/constraints/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/utils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/sqm/core/ui/explorer/filter/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.665
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/oda/spec/manifest/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/ui/connection/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/models/sybasesqlmodel/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/ase/ui/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/schemaobjecteditor/ui/extensions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/modelbase/sql/datatypes/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/routineeditor/parameter/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sybase/asa/schemaobjecteditor/examples/routineeditor/pages/privilege/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/ingres/models/ingressqlmodel/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/enablement/sqlite/ui/connection/drivers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2019-11-22 03:30:29.666
+!MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/sqlbuilder/input/package-summary.html cannot be opened.
